@@ -1,0 +1,351 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{09D07687-4DB4-41FC-BC5C-21F938082608}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QLDANCKH</RootNamespace>
+    <AssemblyName>QLDANCKH</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44338</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=4.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.2.2\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Cors, Version=4.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Cors.4.2.2\lib\net45\Microsoft.Owin.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.2.2\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=4.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.2.2\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=4.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.2.2\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.15.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.15.0\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Cors, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.0.0\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\dashboard1.css" />
+    <Content Include="css\jquery.toast.css" />
+    <Content Include="css\login-register-lock.css" />
+    <Content Include="css\morris.css" />
+    <Content Include="css\style.min.css" />
+    <Content Include="dang-ky-luu-tru-cong-nhan\bao-cao-tom-tat.html" />
+    <Content Include="dang-ky-luu-tru-cong-nhan\bao-cao-tong-hop.html" />
+    <Content Include="dang-ky-luu-tru-cong-nhan\danh-muc-nhiem-vu.html" />
+    <Content Include="dang-ky-luu-tru-cong-nhan\danh-sach-tac-gia.html" />
+    <Content Include="dang-ky-luu-tru-cong-nhan\giay-chung-nhan.html" />
+    <Content Include="dang-ky-luu-tru-cong-nhan\quyet-dinh-cong-nhan.html" />
+    <Content Include="de-xuat-dat-hang\danh-sach-de-xuat.html" />
+    <Content Include="de-xuat-dat-hang\de-xuat-cap-nha-nuoc.html" />
+    <Content Include="de-xuat-dat-hang\de-xuat-cap-tinh.html" />
+    <Content Include="de-xuat-dat-hang\de-xuat-theo-nam.html" />
+    <Content Include="fonts\fa-brands-400.svg" />
+    <Content Include="fonts\fa-regular-400.svg" />
+    <Content Include="fonts\fa-solid-900.svg" />
+    <Content Include="fonts\Simple-Line-Icons.svg" />
+    <Content Include="fonts\themify.svg" />
+    <Content Include="fonts\weathericons-regular-webfont.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="he-thong\phan-quyen.html" />
+    <Content Include="he-thong\thanh-vien.html" />
+    <Content Include="hoi-dong-nghiem-thu-cap-tinh\bao-cao-hoan-thien-thong-ke.html" />
+    <Content Include="hoi-dong-nghiem-thu-cap-tinh\bao-cao-tom-tat.html" />
+    <Content Include="hoi-dong-nghiem-thu-cap-tinh\bao-cao-tong-hop-ket-qua.html" />
+    <Content Include="hoi-dong-nghiem-thu-cap-tinh\bien-ban-nghiem-thu-ket-qua.html" />
+    <Content Include="hoi-dong-nghiem-thu-cap-tinh\danh-muc-nhiem-vu.html" />
+    <Content Include="hoi-dong-nghiem-thu-cap-tinh\quyet-dinh-hoi-dong.html" />
+    <Content Include="hoi-dong-nghiem-thu-co-so\bao-cao-tom-tat.html" />
+    <Content Include="hoi-dong-nghiem-thu-co-so\bao-cao-tong-hop-ket-qua.html" />
+    <Content Include="hoi-dong-nghiem-thu-co-so\bien-ban-nghiem-thu-ket-qua.html" />
+    <Content Include="hoi-dong-nghiem-thu-co-so\danh-muc-nhiem-vu.html" />
+    <Content Include="hoi-dong-nghiem-thu-co-so\quyet-dinh-hoi-dong.html" />
+    <Content Include="hoi-nghi-hoi-thao\bien-ban-hoi-thao.html" />
+    <Content Include="hoi-nghi-hoi-thao\danh-muc-nhiem-vu.html" />
+    <Content Include="hoi-nghi-hoi-thao\ke-hoach-hoi-thao.html" />
+    <Content Include="hoi-nghi-hoi-thao\noi-dung-tham-luan.html" />
+    <Content Include="hoi-nghi-hoi-thao\thanh-phan-tham-gia.html" />
+    <Content Include="hoi-nghi-hoi-thao\thong-tin-hoi-thao.html" />
+    <Content Include="hop-dong-kinh-phi\danh-sach-nhiem-vu.html" />
+    <Content Include="hop-dong-kinh-phi\kinh-phi-da-cap-theo-dot.html" />
+    <Content Include="hop-dong-kinh-phi\kinh-phi-phe-duyet.html" />
+    <Content Include="hop-dong-kinh-phi\thong-tin-ho-so-thanh-ly.html" />
+    <Content Include="images\2.jpg" />
+    <Content Include="images\favicon.png" />
+    <Content Include="images\khcn.png" />
+    <Content Include="images\khcnqb.jpg" />
+    <Content Include="images\login-register.jpg" />
+    <Content Include="images\logo-icon.png" />
+    <Content Include="images\logo-light-icon.png" />
+    <Content Include="images\logo-light-text.png" />
+    <Content Include="images\logo-text.png" />
+    <Content Include="images\trangchu.jpg" />
+    <Content Include="index.html" />
+    <Content Include="js\2jquery.toast.js" />
+    <Content Include="js\bootstrap.bundle.min.js" />
+    <Content Include="js\custom.min.js" />
+    <Content Include="js\dashboard1.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.sparkline.min.js" />
+    <Content Include="js\jquery.toast.js" />
+    <Content Include="js\morris.min.js" />
+    <Content Include="js\perfect-scrollbar.jquery.min.js" />
+    <Content Include="js\raphael-min.js" />
+    <Content Include="js\sidebarmenu.js" />
+    <Content Include="js\waves.js" />
+    <Content Include="kiem-tra-tien-do\bao-cao-tien-do-kiem-tra.html" />
+    <Content Include="kiem-tra-tien-do\danh-muc-nhiem-vu.html" />
+    <Content Include="kiem-tra-tien-do\ke-hoach-kiem-tra.html" />
+    <Content Include="kiem-tra-tien-do\noi-dung-da-thuc-hien.html" />
+    <Content Include="kiem-tra-tien-do\thanh-phan-kiem-tra.html" />
+    <Content Include="kiem-tra-tien-do\thong-tin-hinh-anh-san-pham.html" />
+    <Content Include="Models\danckh.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>danckh.Context.cs</LastGenOutput>
+      <DependentUpon>danckh.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\danckh.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>danckh.edmx</DependentUpon>
+      <LastGenOutput>danckh.cs</LastGenOutput>
+    </Content>
+    <Content Include="nhiem-vu-phe-duyet\danh-sach-nhiem-vu.html" />
+    <Content Include="nhiem-vu-phe-duyet\nhiem-vu-phe-duyet-theo-cap.html" />
+    <Content Include="nhiem-vu-phe-duyet\nhiem-vu-phe-duyet-theo-linh-vuc.html" />
+    <Content Include="nhiem-vu-phe-duyet\nhiem-vu-phe-duyet-theo-nam.html" />
+    <Content Include="nhiem-vu-phe-duyet\thong-tin-quyet-dinh-phe-duyet.html" />
+    <Content Include="quan-ly-chuyen-gia-ung-dung\bao-cao-tinh-hinh-ung-dung.html" />
+    <Content Include="quan-ly-chuyen-gia-ung-dung\bien-ban-chuyen-giao.html" />
+    <Content Include="quan-ly-chuyen-gia-ung-dung\danh-muc-nhiem-vu.html" />
+    <Content Include="quan-ly-chuyen-gia-ung-dung\lanh-dao-tiep-nhan.html" />
+    <Content Include="quan-ly-chuyen-gia-ung-dung\thong-tin-chuyen-gia.html" />
+    <Content Include="quan-ly-gia-han\danh-muc-nhiem-vu.html" />
+    <Content Include="quan-ly-gia-han\don-gia-han.html" />
+    <Content Include="quan-ly-gia-han\quyet-dinh-gia-han.html" />
+    <Content Include="quan-ly-gia-han\thoi-gian-gia-han.html" />
+    <Content Include="register.html" />
+    <Content Include="login.html" />
+    <Content Include="thuc-hien-nhiem-vu\danh-sach-nhiem-vu.html" />
+    <Content Include="thuc-hien-nhiem-vu\ket-qua-thuc-hien.html" />
+    <Content Include="thuc-hien-nhiem-vu\san-pham-nhiem-vu.html" />
+    <Content Include="thuc-hien-nhiem-vu\thong-tin-thuc-hien.html" />
+    <Content Include="thuc-hien-nhiem-vu\tien-do-thuc-hien.html" />
+    <Content Include="to-chuc-chu-tri\nang-luc-nghien-cuu.html" />
+    <Content Include="to-chuc-chu-tri\thong-tin-chu-nhiem-thanh-vien.html" />
+    <Content Include="to-chuc-chu-tri\thong-tin-to-chuc.html" />
+    <Content Include="tuyen-chon-giao-truc-tiep\danh-sach-chuyen-gia.html" />
+    <Content Include="tuyen-chon-giao-truc-tiep\danh-sach-nhiem-vu.html" />
+    <Content Include="tuyen-chon-giao-truc-tiep\phieu-nhan-xet-danh-gia.html" />
+    <Content Include="tuyen-chon-giao-truc-tiep\thong-tin-khach-moi.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\NHANVIENsController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ChiTietQuyenHT.cs">
+      <DependentUpon>danckh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\danckh.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>danckh.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\danckh.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>danckh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\danckh.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>danckh.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\encrypts.cs" />
+    <Compile Include="Models\MyAuthorizationServerProvider.cs" />
+    <Compile Include="Models\NHANVIEN.cs">
+      <DependentUpon>danckh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QuyenHeThong.cs">
+      <DependentUpon>danckh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserMasterRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\fa-regular-400.woff2" />
+    <Content Include="fonts\fa-solid-900.woff2" />
+    <Content Include="fonts\weathericons-regular-webfont.woff2" />
+    <Content Include="fonts\fa-regular-400.eot" />
+    <Content Include="fonts\fa-regular-400.ttf" />
+    <Content Include="fonts\fa-regular-400.woff" />
+    <Content Include="fonts\fa-solid-900.eot" />
+    <Content Include="fonts\fa-solid-900.ttf" />
+    <Content Include="fonts\fa-solid-900.woff" />
+    <Content Include="fonts\weathericons-regular-webfont.eot" />
+    <Content Include="fonts\weathericons-regular-webfont.ttf" />
+    <Content Include="fonts\weathericons-regular-webfont.woff" />
+    <Content Include="fonts\fa-brands-400.eot" />
+    <Content Include="fonts\fa-brands-400.ttf" />
+    <Content Include="fonts\fa-brands-400.woff" />
+    <Content Include="fonts\fa-brands-400.woff2" />
+    <Content Include="fonts\Simple-Line-Icons.eot" />
+    <Content Include="fonts\Simple-Line-Icons.ttf" />
+    <Content Include="fonts\Simple-Line-Icons.woff" />
+    <Content Include="fonts\Simple-Line-Icons.woff2" />
+    <Content Include="fonts\themify.eot" />
+    <Content Include="fonts\themify.ttf" />
+    <Content Include="fonts\themify.woff" />
+    <Content Include="fonts\icomoon.eot" />
+    <Content Include="fonts\icomoon.ttf" />
+    <Content Include="fonts\icomoon.woff" />
+    <EntityDeploy Include="Models\danckh.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>danckh.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\danckh.edmx.diagram">
+      <DependentUpon>danckh.edmx</DependentUpon>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58730</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44338/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
